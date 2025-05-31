@@ -8,7 +8,7 @@
     <!-- Підключення стилів -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>Document</title>
+    <title>Погода в Лондоні</title>
   </head>
   <body>
     <!-- Підключення FontAwesome для використання текстових іконок -->
@@ -19,6 +19,39 @@
     ></script>
 
     <!-- Підключення локального скрипта -->
+
+        <main id="Main">
+          <header>
+            <h1>Погода в <span id="location-name">–</span></h1>
+            <p id="last-updated">Останнє оновлення: <span id="update-time">–</span></p>
+        </header>
+    
+        <section id="current-weather">
+            <div class="weather-icon">
+                <img id="weather-icon" src="" alt="Погода" />
+            </div>
+            <div class="weather-info">
+                <h2 id="temperature">–</h2>
+                <p id="condition-text">–</p>
+                <p id="humidity">–</p>
+                <p id="wind">–</p>
+            </div>
+        </section>
+    
+        <section id="additional-info">
+            <h3>Додаткова інформація</h3>
+            <ul>
+                <li id="dewpoint">Точка роси: –</li>
+                <li id="feelslike">Відчувається як: –</li>
+                <li id="pressure">Тиск: –</li>
+                <li id="visibility">Видимість: –</li>
+                <li id="uv">Індекс UV: –</li>
+            </ul>
+        </section>
+        </main>
+    
+    
+
     <script src="script.js" defer></script>
   </body>
 </html>
