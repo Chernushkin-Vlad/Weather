@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Підключення стилів -->
     <link rel="stylesheet" href="style.css" />
-
     <title>Погода в Лондоні</title>
-  </head>
-  <body>
-    <!-- Підключення FontAwesome для використання текстових іконок -->
-    <script
-      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Підключення локального скрипта -->
-
-        <main id="Main">
-          <header>
+</head>
+<body>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <main id="Main">
+        <header>
             <h1>Погода в <span id="location-name">–</span></h1>
+            <h1>Країна : <span id="country"> </span></h1>
             <p id="last-updated">Останнє оновлення: <span id="update-time">–</span></p>
+            <input type="text" id="location-input" placeholder="Введіть локацію" />
+            <button id="search-button">Пошук</button>
         </header>
-    
         <section id="current-weather">
             <div class="weather-icon">
                 <img id="weather-icon" src="" alt="Погода" />
@@ -37,7 +28,7 @@
                 <p id="wind">–</p>
             </div>
         </section>
-    
+        <div id="weather-forecast"></div>
         <section id="additional-info">
             <h3>Додаткова інформація</h3>
             <ul>
@@ -48,10 +39,7 @@
                 <li id="uv">Індекс UV: –</li>
             </ul>
         </section>
-        </main>
-    
-    
-
+    </main>
     <script src="script.js" defer></script>
-  </body>
+</body>
 </html>

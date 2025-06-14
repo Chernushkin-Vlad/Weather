@@ -3,17 +3,64 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-  color: #333333;
-  margin: 0;
+  color: #333;
   padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header {
   text-align: center;
   margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.sunny {
+  background-image: url('https://images.pexels.com/photos/186980/pexels-photo-186980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+}
+
+.cloudy {
+  background-image: url('https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.rain {
+  background-image: url('https://images.pexels.com/photos/2448749/pexels-photo-2448749.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.snow {
+  background-image: url('https://images.pexels.com/photos/45204/alm-friuli-snow-snowfall-45204.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.fog {
+  background-image: url('https://images.pexels.com/photos/45222/forest-fog-nature-winter-45222.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.thunderstorm {
+  background-image: url('https://images.pexels.com/photos/2226190/pexels-photo-2226190.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.windy {
+  background-image: url('https://images.pexels.com/photos/1030320/pexels-photo-1030320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+}
+
+.rainandsnow {
+  background-image: url('https://images.pexels.com/photos/19492370/pexels-photo-19492370.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.freezing {
+  background-image: url('https://images.pexels.com/photos/828658/pexels-photo-828658.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.sunset {
+  background-image: url('https://images.pexels.com/photos/36744/agriculture-arable-clouds-countryside.jpg?auto=compress&cs=tinysrgb&w=600');
 }
 
 header h1 {
@@ -25,7 +72,31 @@ header h1 {
 header p {
   color: #7f8c8d;
   font-size: 1rem;
-  margin-top: 0;
+}
+
+header input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+  width: 250px;
+  margin-top: 10px;
+}
+
+header button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2c3e50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+header button:hover {
+  background-color: #34495e;
 }
 
 #current-weather {
@@ -35,27 +106,25 @@ header p {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 25px 40px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   max-width: 600px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 40px;
   gap: 20px;
 }
 
 .weather-icon img {
   width: 120px;
   height: auto;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.2));
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
 }
 
 .weather-info h2 {
   font-size: 3rem;
-  margin: 0 0 10px 0;
   color: #34495e;
 }
 
 .weather-info p {
   font-size: 1.2rem;
-  margin: 4px 0;
   color: #2c3e50;
 }
 
@@ -65,12 +134,11 @@ header p {
   margin: 0 auto;
   border-radius: 15px;
   padding: 20px 30px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
 #additional-info h3 {
   font-size: 1.75rem;
-  margin-bottom: 15px;
   color: #34495e;
   text-align: center;
 }
@@ -94,3 +162,19 @@ header p {
   text-align: center;
 }
 
+#weather-forecast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
