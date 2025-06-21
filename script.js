@@ -15,6 +15,29 @@ const uv = document.getElementById('uv');
 const searchButton = document.getElementById('search-button');
 const locationInput = document.getElementById('location-input');
 
+document.getElementById('theme-switch').addEventListener('change', function() {
+    const isChecked = this.checked;
+    document.body.classList.toggle('white', isChecked);
+    document.querySelector('header').classList.toggle('white', isChecked);
+    document.getElementById('current-weather').classList.toggle('white', isChecked);
+    document.getElementById('additional-info').classList.toggle('white', isChecked);
+    document.querySelectorAll('.forecast-day').forEach(day => {
+        day.classList.toggle('white', isChecked);
+    });
+    document.querySelectorAll('#additional-info li').forEach(item => {
+        item.classList.toggle('white', isChecked);
+    });
+    document.querySelectorAll('.weather-info h2').forEach(item => {
+        item.classList.toggle('white', isChecked);
+    });
+    document.querySelectorAll('.weather-info p').forEach(item => {
+        item.classList.toggle('white', isChecked);
+    });
+    document.querySelectorAll('#additional-info h3').forEach(item => {
+        item.classList.toggle('white', isChecked);
+    });
+});
+
 searchButton.addEventListener('click', () => {
     const locationValue = locationInput.value;
     if (locationValue) {
